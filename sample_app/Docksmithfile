@@ -1,0 +1,14 @@
+# Sample app — uses all six instructions
+
+FROM alpine:3.18
+
+WORKDIR /app
+
+ENV GREETING=Hello
+ENV APP_VERSION=1.0
+
+COPY app.sh /app/app.sh
+
+RUN chmod +x /app/app.sh
+
+CMD ["/app/app.sh"]
